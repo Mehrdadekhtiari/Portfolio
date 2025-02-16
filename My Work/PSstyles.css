@@ -1,0 +1,55 @@
+/* Modern CSS for Case Study Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #ff7b00;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.8rem;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #ff7b00;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.content-image {
+    display: block;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}

@@ -50,14 +50,14 @@ function scrollActive() {
 
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 50;
+        const sectionTop = section.offsetTop - 50; // Adjust this value to set the offset
 
         let sectionId = section.getAttribute('id');
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.menu a[href *=' + sectionId + ']').classList.add('active-link');
-        } else{
-            document.querySelector('.menu a[href *=' + sectionId + ']').classList.remove('active-link');
+            document.querySelector('.menu a[href*=' + sectionId + ']').classList.add('active-link');
+        } else {
+            document.querySelector('.menu a[href*=' + sectionId + ']').classList.remove('active-link');
         }
     })
 }
@@ -75,7 +75,7 @@ function resumeActive() {
 
     pages.forEach(page => {
         const sectionHeight = page.offsetHeight;
-        const sectionTop = page.offsetTop -120;
+        const sectionTop = page.offsetTop - 5;
 
         let sectionId = page.getAttribute('id');
         

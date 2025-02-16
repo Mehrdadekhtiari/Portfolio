@@ -43,7 +43,7 @@ a{
     height: auto;
 }
 .section{
-    padding: 90px 0 0;
+    padding: 200px 0 0;
 }
 .container{
     max-width: 1200px;
@@ -219,9 +219,11 @@ header .container{
 
 /*==================  Hero section  =================*/
 .hero{
-    padding-top: 114px;
+    padding-top: 200px;
+    padding-bottom: 10px; /* Adjust value to add space */
     position: relative;
     display: block;
+    margin-bottom: 100px
 }
 .hero_container {
     align-items: center;
@@ -307,12 +309,33 @@ header .container{
 
 /*==================  About section  =================*/
 .about_container{
-    column-gap: 0;
+    padding-top: 200px;
+    column-gap: 10;
     align-items: center;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1200px; /* Set a maximum width to avoid overly large containers */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px;
+    background-color: #f8f8f8; /* Optional: Add a background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.about_content H1{
+    text-align: center;
 }
 .about_content p {
     color: #333;
     margin: 20px 0 15px;
+    width: 100%; /* Makes the paragraph take the full width of its parent container */
+    max-width: 100%; /* Removes the max-width restriction */
+    font-size: 18px !important; /* Improves readability */
+    line-height: 1.8 !important; /* Increases spacing between lines */
+    letter-spacing: 0.5px !important; /* Enhances text clarity */
+    text-align: left !important; /* Left-align for better readability */
+    max-width: 75ch !important; /* Limits line length to improve reading flow */
+    margin: 20px auto !important; /* Centers the paragraph */
+    padding: 10px !important; /* Adds space around text */
+    word-break: break-word !important; /* Ensures text wraps properly */
+    word-break: break-word;
 }
 .about_info {
     display: flex;
@@ -325,7 +348,7 @@ header .container{
     border: 2px dashed var(--main-color);
     border-radius: 10px;
     padding: 10px 15px;
-    width: 40%;
+    width: 100%;
 }
 .about_info > div .number {
     color: var(--main-color);
@@ -339,12 +362,12 @@ header .container{
 
 @media screen and (max-width: 992px) {
     .about_container{
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 1fr 2fr;
     }
 }
 @media screen and (max-width: 765px) {
     .about_container {
-        grid-template-columns: 1fr;
+        grid-template-columns: fr;
         justify-content: center;
         text-align: center;
     }
@@ -355,9 +378,9 @@ header .container{
         font-size: 14px;
     }
 }
-@media screen and(max-width: 576px) {
+@media screen and(max-width: 5px) {
     .about_img img {
-        width: 100%;
+        width: 1%;
     }
 }
 
