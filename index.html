@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- main file css -->
     <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </head>
 <body>
@@ -135,19 +136,13 @@
                                 </div>
                             </div>
                             <div class="portfolio_item filter-app">
-                                <div class="portfolio_wrap">
-                                    <iframe width="100%" height="315"
-                                        src="https://www.youtube.com/embed/HJ6ks37ocWE"
-                                        title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                    <div class="portfolio_info">
-                                        <h4>Project Title</h4>
-                                        <p>Click to play the video.</p>
-                                    </div>
-                                </div>
+                                <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/HJ6ks37ocWE?autoplay=1"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                                </iframe>
                             </div>
                             <div class="portfolio_item filter-live">
                                 <div class="portfolio_wrap">
@@ -617,18 +612,18 @@
         <!--======== Contact section =============-->
         <section class="contact section" id="contact">
             <h2 class="section_title">Contact Me</h2>
-
             <div class="contact_container container">
                 <div class="contact_content">
-                    <div class="inputs">
-                        <input type="text" placeholder="Your Name">
-                        <input type="email" placeholder="Email">
-                    </div>
-                    <!--<input type="password" placeholder="Password">-->
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <a href="#" class="btn">Send Message
-                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                    </a>
+                    <form id="contact-form">
+                        <div class="inputs">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        <textarea id="message" cols="42" rows="10" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn">Send Message
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -668,6 +663,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- Main script -->
     <script src="./main.js"></script>
+    
 
 </body>
 </html>

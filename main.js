@@ -156,3 +156,37 @@ modalClose.forEach(el => {
         })
     })
 })
+// contact form
+// Initialize EmailJS with your Public Key
+(function() {
+    emailjs.init("E2C3piNsWz34hHO8I"); // Ensure this is your correct Public Key
+})();
+
+// Add event listener to the form
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting traditionally
+
+    // Retrieve values from form fields
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Log form data to verify
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
+    // Send email using EmailJS
+    emailjs.send("service_ci37fzc", "template_70etzeb", {
+        name: name,
+        email: email,
+        message: message
+    })
+    .then(function(response) {
+        alert("Message sent successfully!"); // Show success message
+        console.log("Success:", response);
+    }, function(error) {
+        console.error("Failed to send message:", error);
+        alert("Failed to send message: " + error.text); // Show error message
+    });
+});
