@@ -158,35 +158,51 @@ modalClose.forEach(el => {
 })
 // contact form
 // Initialize EmailJS with your Public Key
-(function() {
-    emailjs.init("E2C3piNsWz34hHO8I"); // Ensure this is your correct Public Key
+ (function() {
+    emailjs.init("E2C3piNsWz34hHO8I"); // Replace with your actual Public Key
 })();
 
 // Add event listener to the form
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting traditionally
+    event.preventDefault(); // Prevent the default form submission
+
+    console.log("🚀 Form submitted!"); // Log to confirm the event is triggered
 
     // Retrieve values from form fields
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
 
-    // Log form data to verify
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+    console.log("📌 Name:", name);
+    console.log("📌 Email:", email);
+    console.log("📌 Message:", message);
+
+    // Check if values are empty
+    if (!name || !email || !message) {
+        console.log("⚠️ Error: All fields are required.");
+        alert("All fields are required!");
+        return; // Stop function execution if any field is empty
+    }
+
+    console.log("✅ Attempting to send email...");
 
     // Send email using EmailJS
     emailjs.send("service_ci37fzc", "template_70etzeb", {
         name: name,
         email: email,
         message: message
-    })
+    }, "E2C3piNsWz34hHO8I") // Public Key
     .then(function(response) {
-        alert("Message sent successfully!"); // Show success message
-        console.log("Success:", response);
-    }, function(error) {
-        console.error("Failed to send message:", error);
-        alert("Failed to send message: " + error.text); // Show error message
+        console.log("🎉 Message sent successfully!", response);
+        alert("Message sent successfully!");
+    })
+    .catch(function(error) {
+        console.error("❌ Failed to send message:", error);
+        alert("Failed to send message: " + error.text);
     });
 });
+console.log("🚀 JavaScript is running!");
+
+emailjs.init("E2C3piNsWz34hHO8I") // Replace with your Public Key
+    .then(() => console.log("✅ EmailJS initialized!"))
+    .catch(error => console.error("❌ EmailJS initialization failed:", error));
