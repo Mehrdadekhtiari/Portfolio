@@ -115,6 +115,10 @@ let mixerPortfolio = mixitup('.portfolio_wrap-container', {
 })
 
 
+
+
+
+
 //testimonail swiper
 let swiper = new Swiper('.testimonial_container',{
     effect:'slide',
