@@ -313,7 +313,7 @@ header .container{
     column-gap: 10;
     align-items: center;
     width: 80%; /* Adjust the width as needed */
-    max-width: 1200px; /* Set a maximum width to avoid overly large containers */
+    max-width: 1400px; /* Set a maximum width to avoid overly large containers */
     margin: 0 auto; /* Centers the container horizontally */
     padding: 20px;
     background-color: #f8f8f8; /* Optional: Add a background color */

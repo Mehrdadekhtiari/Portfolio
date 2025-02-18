@@ -156,6 +156,9 @@ modalClose.forEach(el => {
         })
     })
 })
+
+
+
 // contact form
 document.addEventListener("DOMContentLoaded", function () {
     console.log("🚀 JavaScript is running!");
