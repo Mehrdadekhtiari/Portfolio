@@ -12,6 +12,9 @@
     <!-- main file css -->
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     
 
 </head>
@@ -137,13 +140,15 @@
                                 </div>
                             </div>
                             <div class="portfolio_item filter-app">
-                                <iframe width="100%" height="315"
-                                src="https://www.youtube.com/embed/HJ6ks37ocWE?autoplay=1"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                                </iframe>
+                                <div class="portfolio_wrap">
+                                    <iframe width="100%" height="315"
+                                    src="https://www.youtube.com/embed/HJ6ks37ocWE?autoplay=1"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                    </iframe>
+                                </div>
                             </div>
                             <div class="portfolio_item filter-live">
                                 <div class="portfolio_wrap">
@@ -227,10 +232,10 @@
                 <div class="resume_tabs">
                     <ul>
                         <li>
-                            <a href="#page-1" class="current">Education</a>
+                            <a href="#page-1">Experience</a>
                         </li>
                         <li>
-                            <a href="#page-2">Experience</a>
+                            <a href="#page-2" class="current">Education</a>
                         </li>
                         <li>
                             <a href="#page-3">Skills</a>
@@ -242,55 +247,6 @@
                 </div>
                 <div class="resume_content">
                     <div id="page-1" class="page one">
-                        <div id="page_heading">Education</div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="school-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="position">Nexa-land</span>
-                                <h4>Advanced UI Design</h4>
-                                <h4>User experience & User Interface design</h4>
-                                <span class="date">2023-2024</span>
-                                <p>Completed an intensive User Experience & User Interface Design and Advanced UI Design program at Nexa-Land, gaining hands-on experience in user research, wireframing, high-fidelity prototyping, interaction design, and usability testing. Developed real-world projects using Figma, design systems, accessibility principles, and Unity, focusing on creating seamless, user-centered, and immersive digital experiences.</p>
-                            </div>
-                        </div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="school-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="position">Tehran Institute of Technology (MFT)</span>
-                                <h4>Web Design</h4>
-                                <h4>Identity with Windows Server 2016</h4>
-                                <span class="date">2021-2022</span>
-                                <p>Completed a comprehensive Web Design and Identity with Windows Server 2016 program at Tehran Institute of Technology, gaining hands-on experience in front-end web development, responsive design, domain management, server configuration, and network identity management. Developed real-world projects integrating HTML, CSS, JavaScript, and Windows Server to create secure, scalable, and visually engaging digital experiences.</p>
-                            </div>
-                        </div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="school-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="position">IAU University</span>
-                                <h4>bachelor in Arts</h4>
-                                <span class="date">2022-2023</span>
-                                <p>Graduated with a strong foundation in business strategy, procurement, supply chain management, and customs regulations. Gained hands-on experience in logistics operations, data analysis, contract negotiation, and compliance management, enabling effective decision-making in global trade and enterprise solutions.</p>
-                            </div>
-                        </div>
-                        <!--<div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="school-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="date">2023-2023</span>
-                                <h4>User experience design</h4>
-                                <span class="position">UX_land</span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
-                            </div>
-                        </div>-->
-                    </div>
-                    <div id="page-2" class="page two">
                         <div id="page_heading">Experience</div>
                         <div class="resume_wrap">
                             <div class="resume_wrap-icon">
@@ -354,6 +310,57 @@
                             </div>
                         </div>
                     </div>
+
+                    <div id="page-2" class="page two">
+                        <div id="page_heading">Education</div>
+                            <div class="resume_wrap">
+                            <div class="resume_wrap-icon">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </div>
+                            <div class="resume_wrap-content">
+                                <span class="position">Nexa-land</span>
+                                <h4>Advanced UI Design</h4>
+                                <h4>User experience & User Interface design</h4>
+                                <span class="date">2023-2024</span>
+                                <p>Completed an intensive User Experience & User Interface Design and Advanced UI Design program at Nexa-Land, gaining hands-on experience in user research, wireframing, high-fidelity prototyping, interaction design, and usability testing. Developed real-world projects using Figma, design systems, accessibility principles, and Unity, focusing on creating seamless, user-centered, and immersive digital experiences.</p>
+                            </div>
+                        </div>
+                        <div class="resume_wrap">
+                            <div class="resume_wrap-icon">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </div>
+                            <div class="resume_wrap-content">
+                                <span class="position">Tehran Institute of Technology (MFT)</span>
+                                <h4>Web Design</h4>
+                                <h4>Identity with Windows Server 2016</h4>
+                                <span class="date">2021-2022</span>
+                                <p>Completed a comprehensive Web Design and Identity with Windows Server 2016 program at Tehran Institute of Technology, gaining hands-on experience in front-end web development, responsive design, domain management, server configuration, and network identity management. Developed real-world projects integrating HTML, CSS, JavaScript, and Windows Server to create secure, scalable, and visually engaging digital experiences.</p>
+                            </div>
+                        </div>
+                        <div class="resume_wrap">
+                            <div class="resume_wrap-icon">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </div>
+                            <div class="resume_wrap-content">
+                                <span class="position">IAU University</span>
+                                <h4>bachelor in Arts</h4>
+                                <span class="date">2022-2023</span>
+                                <p>Graduated with a strong foundation in business strategy, procurement, supply chain management, and customs regulations. Gained hands-on experience in logistics operations, data analysis, contract negotiation, and compliance management, enabling effective decision-making in global trade and enterprise solutions.</p>
+                            </div>
+                        </div>
+                        <!--<div class="resume_wrap">
+                            <div class="resume_wrap-icon">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </div>
+                            <div class="resume_wrap-content">
+                                <span class="date">2023-2023</span>
+                                <h4>User experience design</h4>
+                                <span class="position">UX_land</span>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
+                            </div>
+                        </div>-->
+                    </div>
+
                     <div id="page-3" class="page three">
                         <div id="page_heading">Skills</div>
                         <div class="progressBoxs grid">
@@ -633,7 +640,7 @@
                             <input type="text" id="name" placeholder="Your Name" required>
                             <input type="email" id="email" placeholder="Email" required>
                         </div>
-                        <textarea id="message" cols="42" rows="10" placeholder="Message" required></textarea>
+                        <textarea id="message" cols="80" rows="10" placeholder="Message" required></textarea>
                         <button type="submit" class="btn">Send Message
                             <ion-icon name="chevron-forward-outline"></ion-icon>
                         </button>
