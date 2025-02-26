@@ -1,17 +1,25 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Prompt:ital,wght@0,300;0,400;0,500;1,600&display=swap');
 
+/* Reset default margin and padding, set box-sizing to border-box */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Smooth scrolling behavior */
 html{
     scroll-behavior: smooth;
 }
+
+/* Selection color */
 ::selection{
     color: #fff;
     background-color: var(--main-color);
 }
+
+/* Custom scrollbar styles */
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -22,12 +30,16 @@ html{
     background-color: var(--main-color);
     border-radius: 10px;
 }
+
+/* Define CSS variables for colors */
 :root{
     --main-color: #ff7b00ea;
     --second-color:#ffe0c3ea;
     --title-color: #222;
     --subtitle-color: #8d8dbd;
 }
+
+/* Base styles for body */
 body{
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
@@ -35,21 +47,31 @@ body{
     overflow-x: hidden;
     position: relative;
 }
+
+/* Remove text decoration from links */
 a{
     text-decoration: none;
 }
+
+/* Responsive image class */
 .img-fluid{
     max-width: 100%;
     height: auto;
 }
+
+/* Section padding */
 .section{
     padding: 200px 0 0;
 }
+
+/* Container styles */
 .container{
     max-width: 1200px;
     margin: auto;
     padding: 0 50px;
 }
+
+/* Button styles */
 .btn{
     background-color: var(--main-color);
     border: 2px solid var(--main-color);
@@ -68,6 +90,8 @@ a{
     font-size: 28px;
     margin-left: 10px;
 }
+
+/* Section title styles */
 .section_title{
     text-align: center;
     font-size: 36px;
@@ -100,14 +124,15 @@ a{
     border-radius: 50%;
     background-color: var(--main-color);
 }
+
+/* Grid layout */
 .grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
 }
 
- /*  ==========  Header section  ===========  */
-
+/* Header section */
 header{
     position: fixed;
     width: 100%;
@@ -182,6 +207,8 @@ header .container{
     cursor: pointer;
     margin-right: 10px;
 }
+
+/* Responsive styles for header */
 @media screen and (max-width: 768px) {
     .container{
         padding: 0 30px;
@@ -216,8 +243,7 @@ header .container{
     }
 }
 
-
-/*==================  Hero section  =================*/
+/* Hero section */
 .hero{
     padding-top: 200px;
     padding-bottom: 10px; /* Adjust value to add space */
@@ -277,6 +303,7 @@ header .container{
     text-align: right;
 }
 
+/* Responsive styles for hero section */
 @media screen and (max-width: 765px){
     .hero_content h4 {
         font-size: 16px;
@@ -288,7 +315,6 @@ header .container{
         font-size: 15px;
     }
 }
-
 @media screen and (max-width: 576px) {
     .hero_container{
         grid-template-columns: 1fr;
@@ -307,7 +333,7 @@ header .container{
     }
 }
 
-/*==================  About section  =================*/
+/* About section */
 .about_container{
     padding-top: 200px;
     column-gap: 10;
@@ -321,6 +347,7 @@ header .container{
 }
 .about_content H1{
     text-align: center;
+    font-size: 20px;
 }
 .about_content p {
     color: #333;
@@ -331,7 +358,7 @@ header .container{
     line-height: 1.8 !important; /* Increases spacing between lines */
     letter-spacing: 0.5px !important; /* Enhances text clarity */
     text-align: left !important; /* Left-align for better readability */
-    max-width: 75ch !important; /* Limits line length to improve reading flow */
+    max-width: 98ch !important; /* Limits line length to improve reading flow */
     margin: 20px auto !important; /* Centers the paragraph */
     padding: 10px !important; /* Adds space around text */
     word-break: break-word !important; /* Ensures text wraps properly */
@@ -360,6 +387,7 @@ header .container{
     font-weight: 600;
 }
 
+/* Responsive styles for about section */
 @media screen and (max-width: 992px) {
     .about_container{
         grid-template-columns: 1fr 2fr;
@@ -384,8 +412,7 @@ header .container{
     }
 }
 
-
-/* ======== Resume Section ========*/
+/* Resume section */
 .resume_container {
     grid-template-columns: 1fr 5fr;
 }
@@ -467,7 +494,7 @@ header .container{
 }
 .resume_wrap-content p {
     color: var(--subtitle-color);
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 15px;
 }
 .resume_wrap:hover {
@@ -520,6 +547,7 @@ header .container{
     border-radius: 50%;
 }
 
+/* Responsive styles for resume section */
 @media screen and (max-width: 992px) {
     .resume_container {
         grid-template-columns: 1fr;
@@ -547,11 +575,9 @@ header .container{
     .progressBoxs {
         grid-template-columns: 1fr;
     }
-    
 }
 
-
-/* ======== Portfolio Section ========*/
+/* Portfolio section */
 .portfolio_filters {
     display: flex;
     justify-content: center;
@@ -652,6 +678,7 @@ header .container{
     color: #333;
 }
 
+/* Responsive styles for portfolio section */
 @media screen and (max-width: 992px) {
     .portfolio_wrap-container {
         grid-template-columns: repeat(2, 1fr);
@@ -668,8 +695,7 @@ video, iframe {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-/* ======== Testimonail Section ========*/
+/* Testimonial section */
 .testimonial_item {
     display: flex;
     flex-direction: column;
@@ -703,7 +729,7 @@ video, iframe {
     color: #777;
 }
 
-/* ======== Services Section ========*/
+/* Services section */
 .services_container {
     grid-template-columns: repeat(3, 230px);
     column-gap: 2rem;
@@ -793,6 +819,8 @@ video, iframe {
     font-size: 20px;
     margin-right: 10px;
 }
+
+/* Responsive styles for services section */
 @media screen and (max-width: 768px) {
     .services_container {
         grid-template-columns: repeat(2, 1fr);
@@ -804,9 +832,7 @@ video, iframe {
     .services_item h3 {
         font-size: 18px;
     }
-    
 }
-
 @media screen and (max-width: 576px) {
     .services_container {
         grid-template-columns: 1fr;
@@ -819,7 +845,7 @@ video, iframe {
     }
 }
 
-/* ======== Contact Section ========*/
+/* Contact section */
 .contact {
     padding-bottom: 60px;
 }
@@ -866,13 +892,14 @@ textarea:focus {
     column-gap: 10px;
 }
 
+/* Responsive styles for contact section */
 @media screen and (max-width: 576px) {
     .contact_content {
         padding: 0;
     }
-    
 }
-/* ======== footer Section ========*/
+
+/* Footer section */
 .footer_bg {
     background-color: var(--main-color);
     padding-top: 30px;
@@ -906,5 +933,4 @@ textarea:focus {
 }
 .footer_social a:hover {
     background-color: var(--second-color);
-    
 }
