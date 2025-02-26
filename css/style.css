@@ -324,7 +324,7 @@ header .container{
 }
 .about_content p {
     color: #333;
-    margin: 20px 0 15px;
+    margin: 30px 0 15px;
     width: 100%; /* Makes the paragraph take the full width of its parent container */
     max-width: 100%; /* Removes the max-width restriction */
     font-size: 18px !important; /* Improves readability */
