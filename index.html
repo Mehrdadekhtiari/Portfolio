@@ -10,797 +10,889 @@
     <!--  BoxIcon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- main file css -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/newstyle.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Typed.js for text animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Mehrdad Portfolio - Product Designer and UX/UI Expert">
+    <meta name="keywords" content="portfolio, design, UX, UI, product design">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./imge/favicon.ico">
     <!--<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">-->
     
 
 
 </head>
 <body>
-       <!--===========  Header  =================-->
+    <!--===========  Header  =================-->
 
-    <header id="header">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="./imge/Madeleine.gif" alt="" class="img-fluid">
-            </a>
-            <ul  class="menu">
-                <li class="menu_item">
-                    <a href="#hero" class="menu_link active-link">Home</a>
-                </li>
-                <li class="menu_item">
-                    <a href="#portfolio" class="menu_link">My Work</a>
-                </li>
-                <li class="menu_item">
-                    <a href="#about" class="menu_link">About</a>
-                </li>
-                <li class="menu_item">
-                    <a href="#resume" class="menu_link">Background</a>
-                </li>
-                <li class="menu_item">
-                    <a href="#services" class="menu_link">Services</a>
-                </li>
-                <li class="menu_item">
-                    <a href="#contact" class="menu_link">Contact</a>
-                </li>
-                <ion-icon name="close-outline" class="close_icon"></ion-icon>
-            </ul>
-            <ion-icon name="menu-outline" class="toggle_icon"></ion-icon>
-        </div>
-    </header>
+ <header id="header">
+     <div class="container">
+         <a href="#" class="logo">
+             <img src="./imge/Madeleine.gif" alt="" class="img-fluid">
+         </a>
+         <ul  class="menu">
+             <li class="menu_item">
+                 <a href="#hero" class="menu_link active-link">Home</a>
+             </li>
+             <li class="menu_item">
+                 <a href="#portfolio" class="menu_link">My Work</a>
+             </li>
+             <li class="menu_item">
+                 <a href="#about" class="menu_link">About</a>
+             </li>
+             <li class="menu_item">
+                 <a href="#resume" class="menu_link">Background</a>
+             </li>
+             <li class="menu_item">
+                 <a href="#services" class="menu_link">Services</a>
+             </li>
+             <li class="menu_item">
+                 <a href="#contact" class="menu_link">Contact</a>
+             </li>
+             <ion-icon name="close-outline" class="close_icon"></ion-icon>
+         </ul>
+         <ion-icon name="menu-outline" class="toggle_icon"></ion-icon>
+     </div>
+ </header>
 
-    <main>
-        <!--======== Hero section =============-->
-        <section class="hero section" id="hero">
-            <div class="hero_container container grid">
-                <div class="hero_content">
-                    <h3>hi there,</h3>
-                    <h1>I'm Mehrdad</h1>
-                    <h1>A product designer who <br>
-                        <span class="typed" data-typed-items="turns ideas into impact"></span>
-                    </h1>
-                    <p>
-                        With expertise in UX and visual design, I create people focused web and mobile solutions that transform into meaningful experiences.
-                        <br>
-                    </p>
-                    <div class="hero_social">
-                        <a href="#"><ion-icon name="logo-dribbble"></ion-icon></a>
-                        <a href="https://www.linkedin.com/in/mehrdad-sahebekhtiari" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
-                        <!--<a href="#"><ion-icon name="logo-github"></ion-icon></a>-->
-                        <!--<a href="#"><ion-icon name="logo-twitter"></ion-icon></a>-->
-                    </div>
-                    <a href="#portfolio" class="btn">
-                        View my work
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </a>
-                </div>
-            </div>
-        </section>
+ <main>
+     <!--======== Hero section =============-->
+     <section class="hero section" id="hero">
+         <div class="hero_container container">
+             <div class="hero_content">
+                 <h3 class="fade-in">hi there,</h3>
+                 <h1 class="fade-in">I'm Mehrdad</h1>
+                 <h1 class="fade-in gradient-text">A product designer who <br>
+                     <span style="color: #000000; font-weight: 700;">turns ideas into impact</span>
+                 </h1>
+                 <p class="fade-in">
+                     With expertise in UX and visual design, I create people focused web and mobile solutions that transform into meaningful experiences.
+                 </p>
+                 <div class="hero_social fade-in">
+                     <a href="#"><ion-icon name="logo-dribbble"></ion-icon></a>
+                     <a href="https://www.linkedin.com/in/mehrdad-sahebekhtiari" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
+                 </div>
+                 <a href="#portfolio" class="btn slide-up">
+                     View my work
+                     <ion-icon name="arrow-forward-outline"></ion-icon>
+                 </a>
+             </div>
+         </div>
+     </section>
 
 
-        <!--======== Portfolio section =============-->
-        <section class="portfolio section" id="portfolio">
-                    <h2 class="section_title">My Work</h2>
-        
-                    <div class="portfolio_container container">
-                        <ul class="portfolio_filters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">Case study</li>
-                            <!--<li data-filter=".filter-card"></li>-->
-                            <li data-filter=".filter-live">Live projects</li>
-                        </ul>
-        
-                        <div class="portfolio_wrap-container">
-                            <div class="portfolio_item filter-live">
-                                <div class="portfolio_wrap">
-                                    <a href="https://danadano.com/" target="_blank" rel="noopener noreferrer">
-                                        <img src="/imge/Dana Dano.png" alt="danadano" class="img-fluid">
-                                        <div class="portfolio_info">
-                                            <h4>DanaDano jewelery website</h4>
-                                            <p>Dana Dano is an e-commerce platform specializing in handcrafted, solid gold jewelry.</p>
-                                            <div class="portfolio_links">
-                                            <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
-                                            <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
-                                            </div>
-                                        </div>
-                                    </a> 
-                                </div>
-                            </div>
-                            <div class="portfolio_item filter-app">
-                                <div class="portfolio_wrap">
-                                    <a href="/My Work/Print Shop.html" target="_blank" rel="noopener noreferrer">
-                                        <img src="/imge/printum/Case Study-1.jpg" alt="" class="img-fluid">
-                                        <div class="portfolio_info">
-                                            <h4>Printum</h4>
-                                            <p>Printum is a print-on-demand website that enables individuals and businesses to create and sell custom products without the need to manage inventory</p>
-                                            <div class="portfolio_links">
-                                            <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
-                                            <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
-                                            </div>
-                                        </div>
-                                    </a> 
-                                </div>
-                            </div>
-                            <div class="portfolio_item filter-app">
-                                <div class="portfolio_wrap">
-                                    <a href="/My Work/Aid Student.html" target="_blank" rel="noopener noreferrer">
-                                        <img src="/imge/Student Aid/Case Study-2.jpg" alt="" class="img-fluid">
-                                        <div class="portfolio_info">
-                                            <h4>Student Aid</h4>
-                                            <p>The Student Aid Project is a user-friendly platform that simplifies student loan management, promotes financial literacy, and offers guidance for loan applications, designed for both mobile and desktop devices with a focus on user interface.</p>
-                                            <div class="portfolio_links">
-                                            <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
-                                            <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
-                                            </div>
-                                        </div>
-                                    </a> 
-                                </div>
-                            </div>
-                            <div class="portfolio_item filter-app">
-                                <div class="portfolio_wrap">
-                                    <div class="video-container">
-                                        <iframe
-                                        src="https://www.youtube.com/embed/HJ6ks37ocWE?autoplay=0"
-                                        title="YouTube video player"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                    <div class="portfolio_info">
-                                        <h4>Video Presentation</h4>
-                                        <p>A detailed walk-through of my design process and solution for interactive interfaces.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio_item filter-live">
-                                <div class="portfolio_wrap">
-                                    <a href="http://ilingo.ir/" target="_blank" rel="noopener noreferrer">
-                                        <img src="/imge/ilingo.png" alt="iLingo" class="img-fluid">
-                                        <div class="portfolio_info">
-                                            <h4>iLingo</h4>
-                                            <p>iLingo, a language learning application, I focused on creating an engaging and intuitive user experience that seamlessly integrates gamifi cation techniques to enhance language acquisition.</p>
-                                            <div class="portfolio_links">
-                                            <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
-                                            <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
-                                            </div>
-                                        </div>
-                                    </a> 
-                                </div>
-                            </div>
-                            <div class="portfolio_item filter-live">
-                                <div class="portfolio_wrap">
-                                    <a href="https://jewelrywholesale.ca" target="_blank" rel="noopener noreferrer">
-                                        <img src="/imge/ DD Jewelry Wholesale.png" alt="danadano Wholesale" class="img-fluid">
-                                        <div class="portfolio_info">
-                                            <h4> DD Jewelry Wholesale</h4>
-                                            <p>DD Jewelry Wholesale is proudly a Canadian business dedicated to providing high quality, trendy, and stylish 10K, 14K, and 18K Gold Jewelry with exceptional service to our partners in Canada, the USA, and internationally</p>
-                                            <div class="portfolio_links">
-                                            <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
-                                            <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
-                                            </div>
-                                        </div>
-                                    </a> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-        </section>
-        
+     <!--======== Portfolio section =============-->
+     <section class="portfolio section" id="portfolio">
+         <h2 class="section_title reveal gradient-text">My Work</h2>
 
-        <!--======== About section =============-->
-        <section class="about section" id="about">
-            <h2 class="section_title">About Me</h2>
-            <div class="about_container">
-                <div class="about_content">
-                    <h1>I am Mehrdad, a product designer from Ottawa.</h1>
-                    <p>My journey has been anything but traditional—driven by curiosity, problem-solving, and a relentless pursuit of efficiency. My career started in procurement and supply chain management, where I spent over a decade optimizing workflows, negotiating contracts, and ensuring seamless operations in public transportation.</p>
-                    <p>That realization led me to web design and programming, where I first developed a deep understanding of front-end development, responsive design, and system management. As I worked on digital interfaces, I became increasingly fascinated by how users interact with technology, which naturally led me to UX/UI design.</p>
-                    <p>What sets me apart is my systems-thinking approach—I see products not just as screens but as experiences that must be functional, seamless, and business-aligned.</p>
-                </div>
-                <div class="about_img">
-                    <img src="/imge/IMG_1252.JPG" alt="Mehrdad's profile" class="img-fluid">
-                </div>
-            </div>
-        </section>
+         <div class="portfolio_container container">
+             <ul class="portfolio_filters">
+                 <li data-filter="*" class="filter-active">All</li>
+                 <li data-filter=".filter-app">Case study</li>
+                 <!--<li data-filter=".filter-card"></li>-->
+                 <li data-filter=".filter-live">Live projects</li>
+             </ul>
 
-        <!--======== Resume section =============-->
-        <section class="resume section" id="resume">
-            <h2 class="section_title">Background</h2>
+             <div class="portfolio_wrap-container">
+                 <div class="portfolio_item filter-live reveal">
+                     <div class="portfolio_wrap">
+                         <a href="https://danadano.com/" target="_blank" rel="noopener noreferrer">
+                             <img src="/imge/Dana Dano.png" alt="danadano" class="img-fluid">
+                             <div class="portfolio_info">
+                                 <h4>DanaDano jewelery website</h4>
+                                 <p>Dana Dano is an e-commerce platform specializing in handcrafted, solid gold jewelry.</p>
+                                 <div class="portfolio_links">
+                                 <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
+                                 <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
+                                 </div>
+                             </div>
+                         </a> 
+                     </div>
+                 </div>
+                 <div class="portfolio_item filter-app reveal">
+                     <div class="portfolio_wrap">
+                         <a href="/Print Shop.html" target="_blank" rel="noopener noreferrer">
+                             <img src="/imge/printum/Case Study-1.jpg" alt="" class="img-fluid">
+                             <div class="portfolio_info">
+                                 <h4>Printum</h4>
+                                 <p>Printum is a print-on-demand website that enables individuals and businesses to create and sell custom products without the need to manage inventory</p>
+                                 <div class="portfolio_links">
+                                 <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
+                                 <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
+                                 </div>
+                             </div>
+                         </a> 
+                     </div>
+                 </div>
+                 <div class="portfolio_item filter-app reveal">
+                     <div class="portfolio_wrap">
+                         <a href="/Aid Student.html" target="_blank" rel="noopener noreferrer">
+                             <img src="/imge/Student Aid/Case Study-2.jpg" alt="" class="img-fluid">
+                             <div class="portfolio_info">
+                                 <h4>Student Aid</h4>
+                                 <p>The Student Aid Project is a user-friendly platform that simplifies student loan management, promotes financial literacy, and offers guidance for loan applications, designed for both mobile and desktop devices with a focus on user interface.</p>
+                                 <div class="portfolio_links">
+                                 <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
+                                 <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
+                                 </div>
+                             </div>
+                         </a> 
+                     </div>
+                 </div>
+                 <div class="portfolio_item filter-app reveal">
+                     <div class="portfolio_wrap">
+                         <div class="video-container">
+                             <iframe
+                             src="https://www.youtube.com/embed/HJ6ks37ocWE?autoplay=0"
+                             title="YouTube video player"
+                             frameborder="0"
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                             allowfullscreen>
+                             </iframe>
+                         </div>
+                         <div class="portfolio_info">
+                             <h4>Video Presentation</h4>
+                             <p>A detailed walk-through of my design process and solution for interactive interfaces.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="portfolio_item filter-live reveal">
+                     <div class="portfolio_wrap">
+                         <a href="http://ilingo.ir/" target="_blank" rel="noopener noreferrer">
+                             <img src="/imge/ilingo.png" alt="iLingo" class="img-fluid">
+                             <div class="portfolio_info">
+                                 <h4>iLingo</h4>
+                                 <p>iLingo, a language learning application, I focused on creating an engaging and intuitive user experience that seamlessly integrates gamifi cation techniques to enhance language acquisition.</p>
+                                 <div class="portfolio_links">
+                                 <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
+                                 <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
+                                 </div>
+                             </div>
+                         </a> 
+                     </div>
+                 </div>
+                 <div class="portfolio_item filter-live reveal">
+                     <div class="portfolio_wrap">
+                         <a href="https://jewelrywholesale.ca" target="_blank" rel="noopener noreferrer">
+                             <img src="/imge/ DD Jewelry Wholesale.png" alt="danadano Wholesale" class="img-fluid">
+                             <div class="portfolio_info">
+                                 <h4> DD Jewelry Wholesale</h4>
+                                 <p>DD Jewelry Wholesale is proudly a Canadian business dedicated to providing high quality, trendy, and stylish 10K, 14K, and 18K Gold Jewelry with exceptional service to our partners in Canada, the USA, and internationally</p>
+                                 <div class="portfolio_links">
+                                 <!--<a href="#"><ion-icon name="add-outline"></ion-icon></a>
+                                 <a href="#"><ion-icon name="link-outline"></ion-icon></a>-->
+                                 </div>
+                             </div>
+                         </a> 
+                     </div>
+                 </div>
+             </div>
+         </div>
 
-            <div class="resume_container container grid">
-                <div class="resume_tabs">
-                    <ul>
-                        <li>
-                            <a href="#page-1">Experience</a>
-                        </li>
-                        <li>
-                            <a href="#page-2" class="current">Education</a>
-                        </li>
-                        <li>
-                            <a href="#page-3">Skills</a>
-                        </li>
-                        <li>
-                           <!--<a href="#page-4">Awards</a>-->
-                        </li>
-                    </ul>
-                </div>
-                <div class="resume_content">
-                    <div id="page-1" class="page one">
-                        <div id="page_heading">Experience</div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="briefcase-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="date">2022-2024</span>
-                                <h4>UX/UI Designer</h4>
-                                <span class="position">Dana Dano Entertainment Inc</span>
-                                <p>
-                                    •	Managing projects from conception to wireframing, incorporating user research and information architecture for seamless development and successful project outcomes.
-                                    <br>
-                                    •	Implementing design enhancements based on feedback, optimizing user interfaces, and refining data visualization techniques.
-                                    <br>
-                                    •	Translating client desires and user requirements into artfully crafted high-quality designs, skillfully combining aesthetic appeal with user-friendly functionality using design principles, attention to detail, and creative problem-solving.
-                                    <br>
-                                    •	Implementing design changes based on feedback and recommendations gathered during usability testing by enhancing search capabilities, refining data visualization techniques, and optimizing the user interface.
-                                    <br>
-                                    •	Acting as the primary client point of contact, maintaining regular communication through Slack, addressing queries, providing updates, and seeking feedback to ensure client satisfaction and project success.
-                                    <br>
-                                    •	Preparing comprehensive deliverables for developer handoff, including design specifications, documentation, and assets, ensuring accurate implementation of final designs for seamless integration.
-                                    <br>
-                                    •	Utilizing Figma for crafting interactive prototypes, enabling rapid testing and validation of design concepts with stakeholders and end-users.
-                                    </p>
-                            </div>
-                        </div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="briefcase-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="date">2020-2022</span>
-                                <h4>UX/UI Designe</h4>
-                                <span class="position">Arma Dadeh Pardaz</span>
-                                <p>
-                                    •	Collaborated on cross-functional teams to design a user-centric online learning platform, ensuring seamless functionality across devices for content saving and sharing.
-                                    <br>
-                                    •	Developed comprehensive UX flows, personas, and user journey maps to inform the design process. Ensured a deep understanding of user needs and business goals through detailed research and strategic mapping.
-                                    <br>
-                                    •	Contributed to multiple user interface iterations by creatively exploring diverse color palettes, typography, and layouts to craft a visually engaging and user-friendly design.
-                                    <br>
-                                    •	Developed intricate user flows, mapped out user journeys and interactions to guarantee a seamless and intuitive platform experience, utilizing information architecture, usability testing, and user research skills, resulting in increased platform usability.
-                                    <br>
-                                    •	Conducted a comprehensive competitive analysis, identified industry trends, and user expectations, and informed design decisions to create a contemporary and current user experience.
-                                    <br>
-                                    •	Understood the technical side of development frontend, gained basic knowledge of HTML5/CSS3, JavaScript.
-                                    </p>
-                            </div>
-                        </div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="briefcase-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="date">2019-2020</span>
-                                <h4>User experience design</h4>
-                                <span class="position">Saya System Bakhtar</span>
-                                <p>
-                
-                                    •	Developed graphics and layouts for product illustrations, logos, and websites.
-                                    <br>
-                                    •	Provided design feedback by participating in weekly sessions to iterate and strengthen the product's usability and Visual design.
-                                    <br>
-                                    •	Established a design brief document by defi ning project goals, design constraints, design opportunities, user needs, and ten user stories to solidify the product's vision.
-                                    <br>
-                                    •	Created user journey maps and user personas of administrative user groups to troubleshoot issues within the current process of submitting and processing reports, leading to improved processes and increased employee transparency and trust.
-                                    <br>
-                                    •	Optimized module navigation for a more intuitive user experience, achieving a 30% increase in user satisfaction.
-                                    
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
+     </section>
+     
 
-                    <div id="page-2" class="page two">
-                        <div id="page_heading">Education</div>
-                            <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="school-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="position">Nexa-land</span>
-                                <h4>Advanced UI Design</h4>
-                                <h4>User experience & User Interface design</h4>
-                                <span class="date">2023-2024</span>
-                                <p>Completed an intensive User Experience & User Interface Design and Advanced UI Design program at Nexa-Land, gaining hands-on experience in user research, wireframing, high-fidelity prototyping, interaction design, and usability testing. Developed real-world projects using Figma, design systems, accessibility principles, and Unity, focusing on creating seamless, user-centered, and immersive digital experiences.</p>
-                            </div>
-                        </div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="school-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="position">Tehran Institute of Technology (MFT)</span>
-                                <h4>Web Design</h4>
-                                <h4>Identity with Windows Server 2016</h4>
-                                <span class="date">2021-2022</span>
-                                <p>Completed a comprehensive Web Design and Identity with Windows Server 2016 program at Tehran Institute of Technology, gaining hands-on experience in front-end web development, responsive design, domain management, server configuration, and network identity management. Developed real-world projects integrating HTML, CSS, JavaScript, and Windows Server to create secure, scalable, and visually engaging digital experiences.</p>
-                            </div>
-                        </div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="school-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="position">IAU University</span>
-                                <h4>bachelor in Arts</h4>
-                                <span class="date">2022-2023</span>
-                                <p>Graduated with a strong foundation in business strategy, procurement, supply chain management, and customs regulations. Gained hands-on experience in logistics operations, data analysis, contract negotiation, and compliance management, enabling effective decision-making in global trade and enterprise solutions.</p>
-                            </div>
-                        </div>
-                        <!--<div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="school-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="date">2023-2023</span>
-                                <h4>User experience design</h4>
-                                <span class="position">UX_land</span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
-                            </div>
-                        </div>-->
-                    </div>
+     <!--======== About section =============-->
+     <section class="about section" id="about">
+         <h2 class="section_title reveal gradient-text">About Me</h2>
+         <div class="about_container">
+             <div class="about_title">
+                 <h1 class="reveal">I am Mehrdad, a product designer from Ottawa.</h1>
+             </div>
+             <div class="about_content_container">
+                 <div class="about_content reveal">
+                     <p>My journey has been anything but traditional—driven by curiosity, problem-solving, and a relentless pursuit of efficiency. My career started in procurement and supply chain management, where I spent over a decade optimizing workflows, negotiating contracts, and ensuring seamless operations in public transportation.</p>
+                     <p>That realization led me to web design and programming, where I first developed a deep understanding of front-end development, responsive design, and system management. As I worked on digital interfaces, I became increasingly fascinated by how users interact with technology, which naturally led me to UX/UI design.</p>
+                     <p>What sets me apart is my systems-thinking approach—I see products not just as screens but as experiences that must be functional, seamless, and business-aligned.</p>
+                     
+                     <div class="about_info">
+                         <div class="reveal">
+                             <span class="number">4</span>
+                             <br>
+                             <span class="text">Years Experience</span>
+                         </div>
+                         <div class="reveal">
+                             <span class="number">20+</span>
+                             <span class="text">Projects Completed</span>
+                         </div>
+                         <div class="reveal">
+                             <span class="number">15+</span>
+                             <br>
+                             <span class="text">Happy Clients</span>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="about_img reveal">
+                     <div class="corner-tl"></div>
+                     <div class="corner-br"></div>
+                     <img src="./imge/IMG_1252.JPG" alt="Mehrdad's profile" class="img-fluid" onerror="this.src='./imge/about.JPG';">
+                 </div>
+             </div>
+         </div>
+     </section>
 
-                    <div id="page-3" class="page three">
-                        <div id="page_heading">Skills</div>
-                        <div class="progressBoxs grid">
-                            <div class="progressBox">
-                                <div class="progress_name">
-                                    <span>Unity</span>
-                                    <span>70%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress_bar" style="width: 70%;"></div>
-                                </div>
-                            </div>
-                            <div class="progressBox">
-                                <div class="progress_name">
-                                    <span>Blender</span>
-                                    <span>30%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress_bar" style="width: 30%;"></div>
-                                </div>
-                            </div>
-                            <div class="progressBox">
-                                <div class="progress_name">
-                                    <span>Figma</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress_bar" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="progressBox">
-                                <div class="progress_name">
-                                    <span>HTML</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress_bar" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="progressBox">
-                                <div class="progress_name">
-                                    <span>CSS</span>
-                                    <span>80%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress_bar" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                            <div class="progressBox">
-                                <div class="progress_name">
-                                    <span>Javascript</span>
-                                    <span>65%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress_bar" style="width: 65%;"></div>
-                                </div>
-                            </div>
-                            <div class="progressBox">
-                                <div class="progress_name">
-                                    <span>jQuery</span>
-                                    <span>70%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress_bar" style="width: 70%;"></div>
-                                </div>
-                            </div>
-                            <div class="progressBox">
-                                <div class="progress_name">
-                                    <span>photoshop</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress_bar" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div id="page-4" class="page four">
-                        <div id="page_heading">Awards</div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="trophy-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="date">2022-2023</span>
-                                <h4>for example:Top 10 Web Developer</h4>
-                                <span class="position">Upwork</span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
-                            </div>
-                        </div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="trophy-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="date">2020-2022</span>
-                                <h4>Best Designe</h4>
-                                <span class="position">Arma Dadeh Pardaz</span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
-                            </div>
-                        </div>
-                        <div class="resume_wrap">
-                            <div class="resume_wrap-icon">
-                                <ion-icon name="trophy-outline"></ion-icon>
-                            </div>
-                            <div class="resume_wrap-content">
-                                <span class="date">2019-2020</span>
-                                <h4>User experience design</h4>
-                                <span class="position">Saya System Bakhtar</span>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
-                
-            </div>
+     <!--======== Resume section =============-->
+     <section class="resume section" id="resume">
+         <h2 class="section_title reveal gradient-text">Background</h2>
 
+         <div class="resume_container container grid">
+             <div class="resume_tabs">
+                 <ul>
+                     <li>
+                         <a href="#page-1">Experience</a>
+                     </li>
+                     <li>
+                         <a href="#page-2" class="current">Education</a>
+                     </li>
+                     <li>
+                         <a href="#page-3">Skills</a>
+                     </li>
+                     <li>
+                        <!--<a href="#page-4">Awards</a>-->
+                     </li>
+                 </ul>
+             </div>
+             <div class="resume_content">
+                 <div id="page-1" class="page one">
+                     <div id="page_heading">Experience</div>
+                     <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="briefcase-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="date">2022-2024</span>
+                             <h4>UX/UI Designer</h4>
+                             <span class="position">Dana Dano Entertainment Inc</span>
+                             <p>
+                                 •	Managing projects from conception to wireframing, incorporating user research and information architecture for seamless development and successful project outcomes.
+                                 <br>
+                                 •	Implementing design enhancements based on feedback, optimizing user interfaces, and refining data visualization techniques.
+                                 <br>
+                                 •	Translating client desires and user requirements into artfully crafted high-quality designs, skillfully combining aesthetic appeal with user-friendly functionality using design principles, attention to detail, and creative problem-solving.
+                                 <br>
+                                 •	Implementing design changes based on feedback and recommendations gathered during usability testing by enhancing search capabilities, refining data visualization techniques, and optimizing the user interface.
+                                 <br>
+                                 •	Acting as the primary client point of contact, maintaining regular communication through Slack, addressing queries, providing updates, and seeking feedback to ensure client satisfaction and project success.
+                                 <br>
+                                 •	Preparing comprehensive deliverables for developer handoff, including design specifications, documentation, and assets, ensuring accurate implementation of final designs for seamless integration.
+                                 <br>
+                                 •	Utilizing Figma for crafting interactive prototypes, enabling rapid testing and validation of design concepts with stakeholders and end-users.
+                                 </p>
+                         </div>
+                     </div>
+                     <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="briefcase-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="date">2020-2022</span>
+                             <h4>UX/UI Designe</h4>
+                             <span class="position">Arma Dadeh Pardaz</span>
+                             <p>
+                                 •	Collaborated on cross-functional teams to design a user-centric online learning platform, ensuring seamless functionality across devices for content saving and sharing.
+                                 <br>
+                                 •	Developed comprehensive UX flows, personas, and user journey maps to inform the design process. Ensured a deep understanding of user needs and business goals through detailed research and strategic mapping.
+                                 <br>
+                                 •	Contributed to multiple user interface iterations by creatively exploring diverse color palettes, typography, and layouts to craft a visually engaging and user-friendly design.
+                                 <br>
+                                 •	Developed intricate user flows, mapped out user journeys and interactions to guarantee a seamless and intuitive platform experience, utilizing information architecture, usability testing, and user research skills, resulting in increased platform usability.
+                                 <br>
+                                 •	Conducted a comprehensive competitive analysis, identified industry trends, and user expectations, and informed design decisions to create a contemporary and current user experience.
+                                 <br>
+                                 •	Understood the technical side of development frontend, gained basic knowledge of HTML5/CSS3, JavaScript.
+                                 </p>
+                         </div>
+                     </div>
+                     <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="briefcase-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="date">2019-2020</span>
+                             <h4>User experience design</h4>
+                             <span class="position">Saya System Bakhtar</span>
+                             <p>
+             
+                                 •	Developed graphics and layouts for product illustrations, logos, and websites.
+                                 <br>
+                                 •	Provided design feedback by participating in weekly sessions to iterate and strengthen the product's usability and Visual design.
+                                 <br>
+                                 •	Established a design brief document by defi ning project goals, design constraints, design opportunities, user needs, and ten user stories to solidify the product's vision.
+                                 <br>
+                                 •	Created user journey maps and user personas of administrative user groups to troubleshoot issues within the current process of submitting and processing reports, leading to improved processes and increased employee transparency and trust.
+                                 <br>
+                                 •	Optimized module navigation for a more intuitive user experience, achieving a 30% increase in user satisfaction.
+                                 
+                                 </p>
+                         </div>
+                     </div>
+                 </div>
 
-        </section>
+                 <div id="page-2" class="page two">
+                     <div id="page_heading">Education</div>
+                         <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="school-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="position">Nexa-land</span>
+                             <h4>Advanced UI Design</h4>
+                             <h4>User experience & User Interface design</h4>
+                             <span class="date">2023-2024</span>
+                             <p>Completed an intensive User Experience & User Interface Design and Advanced UI Design program at Nexa-Land, gaining hands-on experience in user research, wireframing, high-fidelity prototyping, interaction design, and usability testing. Developed real-world projects using Figma, design systems, accessibility principles, and Unity, focusing on creating seamless, user-centered, and immersive digital experiences.</p>
+                         </div>
+                     </div>
+                     <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="school-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="position">Tehran Institute of Technology (MFT)</span>
+                             <h4>Web Design</h4>
+                             <h4>Identity with Windows Server 2016</h4>
+                             <span class="date">2021-2022</span>
+                             <p>Completed a comprehensive Web Design and Identity with Windows Server 2016 program at Tehran Institute of Technology, gaining hands-on experience in front-end web development, responsive design, domain management, server configuration, and network identity management. Developed real-world projects integrating HTML, CSS, JavaScript, and Windows Server to create secure, scalable, and visually engaging digital experiences.</p>
+                         </div>
+                     </div>
+                     <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="school-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="position">IAU University</span>
+                             <h4>bachelor in Arts</h4>
+                             <span class="date">2022-2023</span>
+                             <p>Graduated with a strong foundation in business strategy, procurement, supply chain management, and customs regulations. Gained hands-on experience in logistics operations, data analysis, contract negotiation, and compliance management, enabling effective decision-making in global trade and enterprise solutions.</p>
+                         </div>
+                     </div>
+                     <!--<div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="school-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="date">2023-2023</span>
+                             <h4>User experience design</h4>
+                             <span class="position">UX_land</span>
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
+                         </div>
+                     </div>-->
+                 </div>
 
-        <!--======== Testimonial section =============-->
-        <section class="testimonial section">
-            <h2 class="section_title">Testimonial</h2>
-
-            <div class="testimonial_container container swiper">
-                <div class="swiper-wrapper">
-                    <!-- First testimonial - centered -->
-                    <div class="swiper-slide" data-swiper-autoplay="5000">
-                        <div class="testimonial_item">
-                            <i class='bx bxs-quote-left testimonial-quote'></i>
-                            <p>Working with Mehrdad was a game-changer for our platform. He took the time to truly understand our business goals and user pain points, translating them into an intuitive and visually engaging interface. His ability to balance functionality with aesthetics resulted in a product that not only looks great but also improves efficiency and user engagement. The feedback from our customers has been overwhelmingly positive, and we've seen a noticeable improvement in retention rates. Mehrdad's attention to detail, structured design process, and collaborative approach make him an invaluable asset to any project.</p>
-                            <div class="img_name">
-                                <img src="./imge/john.jpg" alt="" class="testimonial-avatar">
-                                <div class="testimonial-info">
-                                    <span class="name">James Smith</span>
-                                    <span class="post">clients</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Second testimonial - centered -->
-                    <div class="swiper-slide" data-swiper-autoplay="5000">
-                        <div class="testimonial_item">
-                            <i class='bx bxs-quote-left testimonial-quote'></i>
-                            <p>Mehrdad's expertise in UX/UI design transformed our online store into a seamless and delightful shopping experience. From wireframing to high-fidelity prototypes, he ensured that every element was designed with the user in mind. His insights on user behavior, accessibility, and conversion optimization helped us achieve a 30% increase in sales within the first three months after launch. What stood out most was his professionalism, creativity, and ability to problem-solve—he didn't just design a website; he created an experience that aligns perfectly with our brand and audience. Highly recommend working with him!</p>
-                            <div class="img_name">
-                                <img src="./imge/ana.jpg" alt="" class="testimonial-avatar">
-                                <div class="testimonial-info">
-                                    <span class="name">Kerry Felix</span>
-                                    <span class="post">clients</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Add pagination dots -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <!--======== Servicce section =============-->
-        <section class="services section" id="services">
-            <h2 class="section_title">Services</h2>
-
-            <div class="services_container container grid">
-                <div class="services_item" data-service="uiux">
-                    <i class='bx bxs-devices'></i>
-                    <h3 class="services_title">UI/UX <br>Designer</h3>
-                    <span class="services_button">
-                        View More<i class='bx bx-chevron-right'></i>
-                    </span>
-                </div>
-                <div class="services_item" data-service="branding">
-                    <i class='bx bxs-palette'></i>
-                    <h3 class="services_title">Branding<br>Designer</h3>
-                    <span class="services_button">
-                        View More<i class='bx bx-chevron-right'></i>
-                    </span>
-                </div>
-                <div class="services_item" data-service="frontend">
-                    <i class='bx bx-code-alt'></i>
-                    <h3 class="services_title">Frontend <br>Developer</h3>
-                    <span class="services_button">
-                        View More<i class='bx bx-chevron-right'></i>
-                    </span>
-                </div>
-                
-                <!-- New UX Research Service -->
-                <div class="services_item" data-service="uxresearch">
-                    <i class='bx bx-search-alt'></i>
-                    <h3 class="services_title">UX <br>Research</h3>
-                    <span class="services_button">
-                        View More<i class='bx bx-chevron-right'></i>
-                    </span>
-                </div>
-            </div>
-
-
-        </section>
-
-        <!--======== Contact section =============-->
-        <section class="contact section" id="contact">
-            <h2 class="section_title">Get in Touch</h2>
-            <div class="contact_container container">
-                <div class="contact_content">
-                    <form id="contact-form">
-                        <div class="inputs">
-                            <div class="input-group">
-                                <input type="text" id="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="input-group">
-                                <input type="email" id="email" placeholder="Email Address" required>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <textarea id="message" cols="80" rows="10" placeholder="Tell me about your project..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn">
-                            <span>Send Message</span>
-                            <ion-icon name="paper-plane-outline"></ion-icon>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!--======== Footer section =============-->
-        <footer>
-            <div class="footer_bg">
-                <div class="footer_container container">
-                    <div class="main_footer">
-                        <h3>Let's Connect</h3>
-                        <p>I'm always open to new opportunities, collaborations, and interesting projects. Let's create something amazing together!</p>
-                        <div class="footer_contact">
-                            <a href="mailto:m.s.ekhtiari@gmail.com">
-                                <ion-icon name="mail-outline"></ion-icon>
-                                m.s.ekhtiari@gmail.com
-                            </a>
-                            <a href="tel:+1234567890">
-                                <ion-icon name="call-outline"></ion-icon>
-                                Get in touch
-                            </a>
-                            <a href="#contact">
-                                <ion-icon name="chatbubble-outline"></ion-icon>
-                                Send a message
-                            </a>
-                        </div>
-                        <div class="footer_social">
-                            <a href="#"><i class='bx bxl-facebook'></i></a>
-                            <a href="#"><i class='bx bxl-instagram'></i></a>
-                            <a href="https://www.linkedin.com/in/mehrdad-sahebekhtiari" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
-                            <a href="#"><i class='bx bxl-dribbble'></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer_quick_links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#hero">Home</a></li>
-                            <li><a href="#portfolio">Mywork</a></li>
-                            <li><a href="#about">About Me</a></li>
-                            <li><a href="#resume">Background</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer_newsletter">
-                        <h3>Stay Updated</h3>
-                        <p>Subscribe to my newsletter to receive updates on new projects, design insights, and industry trends.</p>
-                        <form>
-                            <input type="email" placeholder="Your email address">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                    
-                    <div class="footer_copy">&#169; 2024 Mehrdad | Designer & Developer | All rights reserved</div>
-                </div>
-            </div>
-        </footer>
-        
-        <!-- Back to top button -->
-        <div class="back_to_top">
-            <ion-icon name="arrow-up-outline"></ion-icon>
-        </div>
-
-        <!-- Service Modals (moved outside their containers for proper stacking) -->
-        <div class="services_modals_container">
-            <!-- UI/UX Designer Modal -->
-            <div class="services_modal" data-service="uiux">
-                <div>
-                    <div class="modal_close-icon">
-                        <ion-icon name="close-outline"></ion-icon>
-                    </div>
-                    <h3 class="services_modal-title">UI/UX Designer</h3>
-                    <p class="services_modal-description">Services with more than 3 years of experience. Providing quality work to clients and companies.</p>
-                    <ul>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I develop the user interface.</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Web page development.</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I create UX element interaction</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I position your company brand</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Design and mockups of products for companies</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Branding Designer Modal -->
-            <div class="services_modal" data-service="branding">
-                <div>
-                    <div class="modal_close-icon">
-                        <ion-icon name="close-outline"></ion-icon>
-                    </div>
-                    <h3 class="services_modal-title">Branding Designer</h3>
-                    <p class="services_modal-description">Services with more than 3 years of experience. Providing quality work to clients and companies.</p>
-                    <ul>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I develop the user interface.</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Web page development.</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I create UX element interaction</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I position your company brand</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Design and mockups of products for companies</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Frontend Developer Modal -->
-            <div class="services_modal" data-service="frontend">
-                <div>
-                    <div class="modal_close-icon">
-                        <ion-icon name="close-outline"></ion-icon>
-                    </div>
-                    <h3 class="services_modal-title">Frontend Developer</h3>
-                    <p class="services_modal-description">Services with more than 3 years of experience. Providing quality work to clients and companies.</p>
-                    <ul>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I develop the user interface.</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Web page development.</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I create UX element interaction</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">I position your company brand</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Design and mockups of products for companies</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- UX Research Modal -->
-            <div class="services_modal" data-service="uxresearch">
-                <div>
-                    <div class="modal_close-icon">
-                        <ion-icon name="close-outline"></ion-icon>
-                    </div>
-                    <h3 class="services_modal-title">UX Research</h3>
-                    <p class="services_modal-description">In-depth user experience research with specialized methods to create user-centered products.</p>
-                    <ul>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">User interviews and user testing</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Competitive analysis and benchmarking</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Personas and user journey mapping</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">Usability testing and heuristic evaluation</p>
-                        </li>
-                        <li>
-                            <i class='bx bx-check-circle'></i>
-                            <p class="services_modal-info">User behavior analysis and recommendations</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
+                 <div id="page-3" class="page three">
+                     <div id="page_heading">Skills</div>
+                     <div class="skills-container">
+                         <div class="skills-scroll-container">
+                             <div class="skill-box" data-level="70">
+                                 <div class="skill-icon">
+                                     <ion-icon name="game-controller-outline"></ion-icon>
+                                 </div>
+                                 <h3>Unity</h3>
+                                 <div class="skill-level">
+                                     <span class="level-dots">
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot"></span>
+                                         <span class="dot"></span>
+                                     </span>
+                                     <span class="level-text">70%</span>
+                                 </div>
+                             </div>
+                             
+                             <div class="skill-box" data-level="30">
+                                 <div class="skill-icon">
+                                     <ion-icon name="cube-outline"></ion-icon>
+                                 </div>
+                                 <h3>Blender</h3>
+                                 <div class="skill-level">
+                                     <span class="level-dots">
+                                         <span class="dot active"></span>
+                                         <span class="dot"></span>
+                                         <span class="dot"></span>
+                                         <span class="dot"></span>
+                                         <span class="dot"></span>
+                                     </span>
+                                     <span class="level-text">30%</span>
+                                 </div>
+                             </div>
+                             
+                             <div class="skill-box" data-level="90">
+                                 <div class="skill-icon">
+                                     <ion-icon name="diamond-outline"></ion-icon>
+                                 </div>
+                                 <h3>Figma</h3>
+                                 <div class="skill-level">
+                                     <span class="level-dots">
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot"></span>
+                                     </span>
+                                     <span class="level-text">90%</span>
+                                 </div>
+                             </div>
+                             
+                             <div class="skill-box" data-level="90">
+                                 <div class="skill-icon">
+                                     <ion-icon name="logo-html5"></ion-icon>
+                                 </div>
+                                 <h3>HTML</h3>
+                                 <div class="skill-level">
+                                     <span class="level-dots">
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot"></span>
+                                     </span>
+                                     <span class="level-text">90%</span>
+                                 </div>
+                             </div>
+                             
+                             <div class="skill-box" data-level="80">
+                                 <div class="skill-icon">
+                                     <ion-icon name="logo-css3"></ion-icon>
+                                 </div>
+                                 <h3>CSS</h3>
+                                 <div class="skill-level">
+                                     <span class="level-dots">
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot"></span>
+                                     </span>
+                                     <span class="level-text">80%</span>
+                                 </div>
+                             </div>
+                             
+                             <div class="skill-box" data-level="65">
+                                 <div class="skill-icon">
+                                     <ion-icon name="logo-javascript"></ion-icon>
+                                 </div>
+                                 <h3>JavaScript</h3>
+                                 <div class="skill-level">
+                                     <span class="level-dots">
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot"></span>
+                                         <span class="dot"></span>
+                                     </span>
+                                     <span class="level-text">65%</span>
+                                 </div>
+                             </div>
+                             
+                             <div class="skill-box" data-level="70">
+                                 <div class="skill-icon">
+                                     <ion-icon name="logo-nodejs"></ion-icon>
+                                 </div>
+                                 <h3>jQuery</h3>
+                                 <div class="skill-level">
+                                     <span class="level-dots">
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot"></span>
+                                         <span class="dot"></span>
+                                     </span>
+                                     <span class="level-text">70%</span>
+                                 </div>
+                             </div>
+                             
+                             <div class="skill-box" data-level="85">
+                                 <div class="skill-icon">
+                                     <ion-icon name="image-outline"></ion-icon>
+                                 </div>
+                                 <h3>Photoshop</h3>
+                                 <div class="skill-level">
+                                     <span class="level-dots">
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot active"></span>
+                                         <span class="dot"></span>
+                                     </span>
+                                     <span class="level-text">85%</span>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <!--<div id="page-4" class="page four">
+                     <div id="page_heading">Awards</div>
+                     <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="trophy-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="date">2022-2023</span>
+                             <h4>for example:Top 10 Web Developer</h4>
+                             <span class="position">Upwork</span>
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
+                         </div>
+                     </div>
+                     <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="trophy-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="date">2020-2022</span>
+                             <h4>Best Designe</h4>
+                             <span class="position">Arma Dadeh Pardaz</span>
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
+                         </div>
+                     </div>
+                     <div class="resume_wrap">
+                         <div class="resume_wrap-icon">
+                             <ion-icon name="trophy-outline"></ion-icon>
+                         </div>
+                         <div class="resume_wrap-content">
+                             <span class="date">2019-2020</span>
+                             <h4>User experience design</h4>
+                             <span class="position">Saya System Bakhtar</span>
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis sequi sed consequuntur esse quas laboriosam alias necessitatibus, recusandae ex voluptas corrupti quia eius sunt tempore ad in eveniet vero.</p>
+                         </div>
+                     </div>
+                 </div>-->
+             </div>
+             
+         </div>
 
 
-    <!--  Swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!--  mixitup  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
-    <!--  typed js  -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!--  ionicons  -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <!-- Main script -->
-    <script src="./main.js"></script>
+     </section>
 
-    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-        <div class="flex-shrink-0">
-          <!-- ... -->
-        </div>
-        <div>
-          <!-- ... -->
-        </div>
-      </div>
-    
+     <!--======== Testimonial section =============-->
+     <section class="testimonial section">
+         <h2 class="section_title">Testimonial</h2>
 
+         <div class="testimonial_container container swiper">
+             <div class="swiper-wrapper">
+                 <div class="testimonial_item swiper-slide" data-swiper-autoplay="5000">
+                     <i class='bx bxs-quote-left testimonial-quote'></i>
+                     <p>Working with Mehrdad was a game-changer for our platform. He took the time to truly understand our business goals and user pain points, translating them into an intuitive and visually engaging interface. His ability to balance functionality with aesthetics resulted in a product that not only looks great but also improves efficiency and user engagement. The feedback from our customers has been overwhelmingly positive, and we've seen a noticeable improvement in retention rates. Mehrdad's attention to detail, structured design process, and collaborative approach make him an invaluable asset to any project.</p>
+                     <div class="img_name">
+                         <img src="./imge/john.jpg" alt="" class="testimonial-avatar">
+                         <div class="testimonial-info">
+                             <span class="name">James Smith</span>
+                             <span class="post">clients</span>
+                         </div>
+ 
+                 </div>
+                 <div class="testimonial_item swiper-slide" data-swiper-autoplay="5000">
+                     <i class='bx bxs-quote-left testimonial-quote'></i>
+                     <p>Mehrdad's expertise in UX/UI design transformed our online store into a seamless and delightful shopping experience. From wireframing to high-fidelity prototypes, he ensured that every element was designed with the user in mind. His insights on user behavior, accessibility, and conversion optimization helped us achieve a 30% increase in sales within the first three months after launch. What stood out most was his professionalism, creativity, and ability to problem-solve—he didn't just design a website; he created an experience that aligns perfectly with our brand and audience. Highly recommend working with him!</p>
+                     <div class="img_name">
+                         <img src="./imge/ana.jpg" alt="" class="testimonial-avatar">
+                         <div class="testimonial-info">
+                             <span class="name">Kerry Felix</span>
+                             <span class="post">clients</span>
+                         </div>
+                     </div>
+ 
+                 </div>
+             </div>
+             
+             <!-- Add pagination dots -->
+             <div class="swiper-pagination"></div>
+         </div>
+     </section>
+
+     <!--======== Servicce section =============-->
+     <section class="services section" id="services">
+         <h2 class="section_title reveal gradient-text">Services</h2>
+
+         <div class="services_container container grid">
+             <div class="services_item" data-service="uiux">
+                 <i class='bx bxs-devices'></i>
+                 <h3 class="services_title">UI/UX <br>Designer</h3>
+                 <span class="services_button">
+                     View More<i class='bx bx-chevron-right'></i>
+                 </span>
+             </div>
+             <div class="services_item" data-service="branding">
+                 <i class='bx bxs-palette'></i>
+                 <h3 class="services_title">Branding<br>Designer</h3>
+                 <span class="services_button">
+                     View More<i class='bx bx-chevron-right'></i>
+                 </span>
+             </div>
+             <div class="services_item" data-service="frontend">
+                 <i class='bx bx-code-alt'></i>
+                 <h3 class="services_title">Frontend <br>Developer</h3>
+                 <span class="services_button">
+                     View More<i class='bx bx-chevron-right'></i>
+                 </span>
+             </div>
+             
+             <!-- New UX Research Service -->
+             <div class="services_item" data-service="uxresearch">
+                 <i class='bx bx-search-alt'></i>
+                 <h3 class="services_title">UX <br>Research</h3>
+                 <span class="services_button">
+                     View More<i class='bx bx-chevron-right'></i>
+                 </span>
+             </div>
+         </div>
+
+
+     </section>
+
+     <!--======== Contact section =============-->
+     <section class="contact section" id="contact">
+         <h2 class="section_title reveal gradient-text">Get in Touch</h2>
+         <div class="contact_container container">
+             <div class="contact_content">
+                 <form id="contact-form">
+                     <div class="form-decoration">
+                         <div class="deco-circle"></div>
+                         <div class="deco-line"></div>
+                     </div>
+                     
+                     <p class="contact-intro">I'm always interested in new projects and collaborations. Send me a message and let's create something amazing together!</p>
+                     
+                     <div class="inputs">
+                         <div class="input-group">
+                             <input type="text" id="name" placeholder="Your Name" required>
+                         </div>
+                         <div class="input-group">
+                             <input type="email" id="email" placeholder="Email Address" required>
+                         </div>
+                     </div>
+                     <div class="input-group">
+                         <textarea id="message" cols="80" rows="10" placeholder="Tell me about your project..." required></textarea>
+                     </div>
+                     <button type="submit" class="btn">
+                         <span>Send Message</span>
+                         <ion-icon name="paper-plane-outline"></ion-icon>
+                     </button>
+                 </form>
+             </div>
+         </div>
+     </section>
+
+     <!--======== Footer section =============-->
+     <footer>
+         <div class="footer_bg">
+             <div class="footer_container container">
+                 <div class="main_footer">
+                     <h3>Let's Connect</h3>
+                     <p>I'm always open to new opportunities, collaborations, and interesting projects. Let's create something amazing together!</p>
+                     <div class="footer_contact">
+                         <a href="mailto:m.s.ekhtiari@gmail.com">
+                             <ion-icon name="mail-outline"></ion-icon>
+                             m.s.ekhtiari@gmail.com
+                         </a>
+                         <a href="tel:+1234567890">
+                             <ion-icon name="call-outline"></ion-icon>
+                             Get in touch
+                         </a>
+                         <a href="#contact">
+                             <ion-icon name="chatbubble-outline"></ion-icon>
+                             Send a message
+                         </a>
+                     </div>
+                     <div class="footer_social">
+                         <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                         <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                         <a href="https://www.linkedin.com/in/mehrdad-sahebekhtiari" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                         <a href="#" aria-label="Dribbble"><i class='bx bxl-dribbble'></i></a>
+                     </div>
+                 </div>
+                 
+                 <div class="footer-separator"></div>
+                 
+                 <div class="footer_quick_links">
+                     <h3>Quick Links</h3>
+                     <ul>
+                         <li><a href="#hero">Home</a></li>
+                         <li><a href="#portfolio">My Work</a></li>
+                         <li><a href="#about">About Me</a></li>
+                         <li><a href="#resume">Background</a></li>
+                         <li><a href="#services">Services</a></li>
+                         <li><a href="#contact">Contact</a></li>
+                     </ul>
+                 </div>
+                 
+                 <div class="footer-separator"></div>
+                 
+                 <div class="footer_newsletter">
+                     <h3>Stay Updated</h3>
+                     <p>Subscribe to my newsletter to receive updates on new projects, design insights, and industry trends.</p>
+                     <form>
+                         <input type="email" placeholder="Your email address" aria-label="Email for newsletter">
+                         <button type="submit">Subscribe</button>
+                     </form>
+                 </div>
+                 
+                 <div class="footer_copy">&#169; 2024 Mehrdad | Designer & Developer | All rights reserved</div>
+             </div>
+         </div>
+     </footer>
+     
+     <!-- Back to top button -->
+     <div class="back_to_top">
+         <ion-icon name="arrow-up-outline"></ion-icon>
+     </div>
+
+     <!-- Service Modals (moved outside their containers for proper stacking) -->
+     <div class="services_modals_container">
+         <!-- UI/UX Designer Modal -->
+         <div class="services_modal" data-service="uiux">
+             <div>
+                 <div class="modal_close-icon">
+                     <ion-icon name="close-outline"></ion-icon>
+                 </div>
+                 <h3 class="services_modal-title">UI/UX Designer</h3>
+                 <p class="services_modal-description">Services with more than 3 years of experience. Providing quality work to clients and companies.</p>
+                 <ul>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I develop the user interface.</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Web page development.</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I create UX element interaction</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I position your company brand</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Design and mockups of products for companies</p>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+         
+         <!-- Branding Designer Modal -->
+         <div class="services_modal" data-service="branding">
+             <div>
+                 <div class="modal_close-icon">
+                     <ion-icon name="close-outline"></ion-icon>
+                 </div>
+                 <h3 class="services_modal-title">Branding Designer</h3>
+                 <p class="services_modal-description">Services with more than 3 years of experience. Providing quality work to clients and companies.</p>
+                 <ul>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I develop the user interface.</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Web page development.</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I create UX element interaction</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I position your company brand</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Design and mockups of products for companies</p>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+         
+         <!-- Frontend Developer Modal -->
+         <div class="services_modal" data-service="frontend">
+             <div>
+                 <div class="modal_close-icon">
+                     <ion-icon name="close-outline"></ion-icon>
+                 </div>
+                 <h3 class="services_modal-title">Frontend Developer</h3>
+                 <p class="services_modal-description">Services with more than 3 years of experience. Providing quality work to clients and companies.</p>
+                 <ul>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I develop the user interface.</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Web page development.</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I create UX element interaction</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">I position your company brand</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Design and mockups of products for companies</p>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+         
+         <!-- UX Research Modal -->
+         <div class="services_modal" data-service="uxresearch">
+             <div>
+                 <div class="modal_close-icon">
+                     <ion-icon name="close-outline"></ion-icon>
+                 </div>
+                 <h3 class="services_modal-title">UX Research</h3>
+                 <p class="services_modal-description">In-depth user experience research with specialized methods to create user-centered products.</p>
+                 <ul>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">User interviews and user testing</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Competitive analysis and benchmarking</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Personas and user journey mapping</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">Usability testing and heuristic evaluation</p>
+                     </li>
+                     <li>
+                         <i class='bx bx-check-circle'></i>
+                         <p class="services_modal-info">User behavior analysis and recommendations</p>
+                     </li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+ </main>
+
+
+ <!--  Swiper js -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <!--  mixitup  -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+ <!--  typed js  -->
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+ <!--  ionicons  -->
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ <!-- Main script -->
+ <script src="./newmain.js"></script>
+ <!-- 3D animations script -->
+ <script src="/newanimation.js"></script>
 </body>
 </html>

@@ -3,7 +3,6 @@ const navbarMenu = document.querySelector('.menu');
 const menuLinks = document.querySelectorAll('.menu_link');
 const iconClose = document.querySelector('.close_icon');
 
-
 iconToggle.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
 });
@@ -28,24 +27,49 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader);
 
 /* hero type effect */
-const typed = document.querySelector('.typed');
- 
-if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed',{
-        strings: typed_strings,
-        loop: true,
-        typeSpeed: 80,
-        backSpeed: 40,
-        backDelay: 2000,
-        startDelay: 1000,
-        fadeOut: true,
-        showCursor: true,
-        cursorChar: '|',
-        autoInsertCss: true
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait for document to fully load
+    window.addEventListener('load', function() {
+        const typedElement = document.querySelector('.typed');
+        
+        if (typedElement) {
+            // Force element visibility before initialization
+            typedElement.style.color = '#000000';
+            typedElement.style.opacity = '1';
+            typedElement.style.visibility = 'visible';
+            
+            // Initialize Typed.js with optimized settings
+            const typed = new Typed('.typed', {
+                strings: ['turns ideas into impact'],
+                typeSpeed: 40,          // Faster typing
+                backSpeed: 25,          // Faster backspacing
+                backDelay: 3000,        // Longer pause before backspacing
+                startDelay: 500,        // Less delay before starting
+                loop: true,             // Continue looping
+                showCursor: true,       // Show cursor
+                cursorChar: '|',        // Cursor character
+                autoInsertCss: false,   // Don't auto-insert CSS
+                smartBackspace: false,  // Don't use smart backspace
+                onBegin: function() {
+                    console.log('Typing started');
+                },
+                onComplete: function() {
+                    console.log('Typing complete');
+                    // Force visibility again when complete
+                    typedElement.style.color = '#000000';
+                }
+            });
+            
+            // Fallback mechanism
+            setTimeout(function() {
+                if (!typedElement.textContent) {
+                    typedElement.textContent = 'turns ideas into impact';
+                    typedElement.style.color = '#000000';
+                }
+            }, 2000);
+        }
     });
-}
+});
 
 // Scroll section active link
 const sections = document.querySelectorAll('section[id]');
@@ -69,28 +93,64 @@ function scrollActive() {
 
 window.addEventListener('scroll', scrollActive);
 
-
-// Resume scroll
-
+// Get all resume pages and tabs
 const pages = document.querySelectorAll('.page');
 const resume = document.querySelector('.resume');
 
+// Resume scroll - enhanced to make tabs bold when scrolling
 function resumeActive() {
-    const scrollY = window.pageYOffset; 
-
-    pages.forEach(page => {
-        const sectionHeight = page.offsetHeight;
-        const sectionTop = page.offsetTop - 5;
-
-        let sectionId = page.getAttribute('id');
-        
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.resume_tabs a[href *=' + sectionId + ']').classList.add('current');
-        } else {
-            document.querySelector('.resume_tabs a[href *=' + sectionId + ']').classList.remove('current');
-        }
-    })
+    const scrollY = window.pageYOffset;
+    const resumeSection = document.getElementById('resume');
+    const resumeRect = resumeSection ? resumeSection.getBoundingClientRect() : null;
     
+    // Check if we're in the resume section
+    if (resumeSection && resumeRect && resumeRect.top <= 100 && resumeRect.bottom >= 100) {
+        // We're in the resume section, so determine which subsection we're in
+        pages.forEach(page => {
+            const rect = page.getBoundingClientRect();
+            let sectionId = page.getAttribute('id');
+            
+            // If this page is visible in the viewport (with some buffer)
+            if (rect.top <= 300 && rect.bottom >= 100) {
+                // Get all tab links
+                const allTabs = document.querySelectorAll('.resume_tabs ul li a');
+                
+                // Remove current class and bold styling from all tabs
+                allTabs.forEach(tab => {
+                    tab.classList.remove('current');
+                    tab.style.fontWeight = '500'; // Reset to normal weight
+                });
+                
+                // Add current class to the tab corresponding to this page
+                const targetTab = document.querySelector('.resume_tabs a[href*=' + sectionId + ']');
+                if (targetTab) {
+                    targetTab.classList.add('current');
+                    targetTab.style.fontWeight = '700'; // Make it bold
+                }
+                
+                // Hide all pages with animation
+                pages.forEach(p => {
+                    if (p !== page) {
+                        p.classList.remove('active');
+                    }
+                });
+                
+                // Show this page with animation
+                page.classList.add('active');
+                
+                // Since we found the visible page, no need to check others
+                return;
+            }
+        });
+    } else {
+        // If we're not in the resume section, reset all tabs to normal weight
+        const allTabs = document.querySelectorAll('.resume_tabs ul li a');
+        allTabs.forEach(tab => {
+            if (!tab.classList.contains('current')) {
+                tab.style.fontWeight = '500';
+            }
+        });
+    }
 }
 
 window.addEventListener('scroll', resumeActive)
@@ -604,3 +664,134 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Resume tabs click functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const resumeTabs = document.querySelectorAll('.resume_tabs ul li a');
+    
+    // Add click event listeners to tabs
+    resumeTabs.forEach(tab => {
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove current class from all tabs
+            resumeTabs.forEach(tab => {
+                tab.classList.remove('current');
+                tab.style.fontWeight = '500'; // Set to normal weight
+            });
+            
+            // Add current class to clicked tab
+            this.classList.add('current');
+            this.style.fontWeight = '700'; // Make it bold
+            
+            // Get the target page
+            const target = this.getAttribute('href').substring(1);
+            const targetPage = document.getElementById(target);
+            
+            // Hide all pages
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show target page
+            if (targetPage) {
+                targetPage.classList.add('active');
+                
+                // Scroll to the resume section to ensure it's visible
+                const resumeSection = document.getElementById('resume');
+                if (resumeSection) {
+                    resumeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+    
+    // Initialize tabs - show first one by default
+    function initResumeTabs() {
+        const firstTab = document.querySelector('.resume_tabs ul li a');
+        const firstPage = document.querySelector('.page');
+        
+        if (firstTab && firstPage) {
+            firstTab.classList.add('current');
+            firstTab.style.fontWeight = '700'; // Bold the first tab initially
+            firstPage.classList.add('active');
+        }
+    }
+    
+    // Check if any tab already has 'current' class, if not initialize
+    const hasCurrentTab = document.querySelector('.resume_tabs ul li a.current');
+    if (!hasCurrentTab) {
+        initResumeTabs();
+    }
+    
+    // Make sure the current tab is always bold
+    const currentTab = document.querySelector('.resume_tabs ul li a.current');
+    if (currentTab) {
+        currentTab.style.fontWeight = '700';
+    }
+});
+
+// Initialize scrolling skills when the skills tab is active
+document.addEventListener('DOMContentLoaded', function() {
+    const skillsTab = document.querySelector('.resume_tabs a[href="#page-3"]');
+    const skillsPage = document.getElementById('page-3');
+    const skillsContainer = document.querySelector('.skills-scroll-container');
+    
+    if (skillsTab && skillsPage && skillsContainer) {
+        // Duplicate skill boxes for continuous infinite scrolling
+        const cloneSkills = () => {
+            // Get all the skill boxes
+            const skillBoxes = skillsPage.querySelectorAll('.skill-box');
+            
+            // Clone each skill box and append to the container
+            skillBoxes.forEach(box => {
+                const clone = box.cloneNode(true);
+                skillsContainer.appendChild(clone);
+            });
+        };
+        
+        // Clone skills for continuous scrolling
+        cloneSkills();
+        
+        // Handle tab click to ensure animation starts correctly
+        skillsTab.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Show the skills page
+            const allPages = document.querySelectorAll('.page');
+            allPages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            skillsPage.classList.add('active');
+            
+            // Reset animation
+            skillsContainer.style.animation = 'none';
+            // Force reflow
+            void skillsContainer.offsetWidth;
+            // Restart animation
+            skillsContainer.style.animation = 'scrollSkills 35s linear infinite';
+            
+            // Mark the skills tab as current
+            const allTabs = document.querySelectorAll('.resume_tabs ul li a');
+            allTabs.forEach(tab => {
+                tab.classList.remove('current');
+                tab.style.fontWeight = '500';
+            });
+            
+            skillsTab.classList.add('current');
+            skillsTab.style.fontWeight = '700';
+        });
+        
+        // Handle hover on skill boxes
+        const skillBoxes = document.querySelectorAll('.skill-box');
+        skillBoxes.forEach(box => {
+            box.addEventListener('mouseenter', function() {
+                skillsContainer.style.animationPlayState = 'paused';
+            });
+            
+            box.addEventListener('mouseleave', function() {
+                skillsContainer.style.animationPlayState = 'running';
+            });
+        });
+    }
+});
